@@ -1,0 +1,12 @@
+---
+- name: installations
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - zip
+    - vim
+    - docker
+    
+- name: Create txt file
+  shell: echo Hello world > /etc/ansible/hw14/test1.txt
